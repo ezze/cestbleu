@@ -1,0 +1,26 @@
+{
+  "name": "cestbleu",
+  "version": "0.1.0",
+  "description": "Minimal set of basic CSS controls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezze/cestbleu.git"
+  },
+  "keywords": [
+    "controls",
+    "components",
+    "framework",
+    "css",
+    "sass"
+  ],
+  "author": "Dmitriy Pushkov <ezze@ezze.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezze/cestbleu/issues"
+  },
+  "homepage": "https://github.com/ezze/cestbleu#readme"
+}
