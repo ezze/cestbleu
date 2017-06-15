@@ -46,22 +46,39 @@ $primary: $cyan
 $primary-dark: $cyan-dark
 $primary-light: $cyan-light
 
-@if ($theme == "green")
-  $primary: $green
-  $primary-dark: $green-dark
-  $primary-light: $green-light
-@else if ($theme == "brown")
-  $primary: $brown
-  $primary-dark: $brown-dark
-  $primary-light: $brown-light
+
+@if ($theme == "blue")
+  $primary: $blue
+  $primary-dark: $blue-dark
+  $primary-light: $blue-light
 @else if ($theme == "red")
   $primary: $red
   $primary-dark: $red-dark
   $primary-light: $red-light
-@else if ($theme == "blue")
-  $primary: $blue
-  $primary-dark: $blue-dark
-  $primary-light: $blue-light
+@else if ($theme == "green")
+  $primary: $green
+  $primary-dark: $green-dark
+  $primary-light: $green-light
+@else if ($theme == "yellow")
+  $primary: $yellow
+  $primary-dark: $yellow-dark
+  $primary-light: $yellow-light
+@else if ($theme == "orange")
+  $primary: $orange
+  $primary-dark: $orange-dark
+  $primary-light: $orange-light
+@else if ($theme == "cyan")
+  $primary: $cyan
+  $primary-dark: $cyan-dark
+  $primary-light: $cyan-light  
+@else if ($theme == "brown")
+  $primary: $brown
+  $primary-dark: $brown-dark
+  $primary-light: $brown-light
+@else if ($theme == "purple")
+  $primary: $purple
+  $primary-dark: $purple-dark
+  $primary-light: $purple-light
 
 $colors: (blue: ($blue, $blue-dark, $blue-light), red: ($red, $red-dark, $red-light), green: ($green, $green-dark, $green-light), yellow: ($yellow, $yellow-dark, $yellow-light), orange: ($orange, $orange-dark, $orange-light), cyan: ($cyan, $cyan-dark, $cyan-light), brown: ($brown, $brown-dark, $brown-light), purple: ($purple, $purple-dark, $purple-light), primary: ($primary, $primary-dark, $primary-light))
 
