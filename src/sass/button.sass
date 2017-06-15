@@ -1,0 +1,109 @@
+@import "variables"
+@import "functions"
+
+
+.button
+  display: inline-block
+  height: $button-height
+  line-height: $button-height
+  padding: 0 $button-padding-horizontal
+  border: none
+  border-radius: $button-border-radius
+  font-family: $button-font-family
+  font-size: $font-size-normal
+  color: $button-default-text-color
+  background-color: $button-default-bg-color
+
+  &::-moz-focus-inner
+    padding: 0
+    border: none
+
+  > .fa
+    margin: 0 $button-icon-gap
+
+    &:first-child
+      margin-left: 0
+
+    &:last-child
+      margin-right: 0
+
+  &.button-small
+    font-size: $font-size-small
+    height: $button-small-height
+    line-height: $button-small-height
+    padding: 0 $button-small-padding-horizontal
+    border-radius: $button-small-border-radius
+
+    > .fa
+      margin: 0 $button-small-icon-gap
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+  &.button-medium
+    font-size: $font-size-medium
+    height: $button-medium-height
+    line-height: $button-medium-height
+    padding: 0 $button-medium-padding-horizontal
+    border-radius: $button-medium-border-radius
+
+    > .fa
+      margin: 0 $button-medium-icon-gap
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+  &:hover
+    cursor: pointer
+    color: $button-default-hover-text-color
+    background-color: $button-default-hover-bg-color
+
+  &.button-active,
+  &.active
+    color: $button-default-active-text-color
+    background-color: $button-default-active-bg-color
+
+  &:focus
+    outline: none
+
+  @each $name, $values in $colors
+    $color: nth($values, 1)
+    $color-dark: nth($values, 2)
+    $color-light: nth($values, 3)
+
+    &.button-#{$name}
+      color: contrast-color($color-dark, $gray-dark)
+      background-color: $color-dark
+
+      &:hover
+        color: contrast-color($color-dark, $gray-dark)
+        background-color: $color
+
+    &.button-#{$name}-light
+      color: contrast-color($color-light, $gray-dark)
+      background-color: $color
+
+      &:hover
+        color: contrast-color($color-light, $gray-dark)
+        background-color: $color-light
+
+  &[disabled]
+    cursor: default
+
+    &,
+    &:hover
+      color: $button-disabled-text-color
+      background-color: $button-disabled-bg-color
+
+
+a.button
+
+  &,
+  &:hover
+    text-decoration: none
