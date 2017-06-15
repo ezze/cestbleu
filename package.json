@@ -2,7 +2,8 @@
   "name": "cestbleu",
   "version": "0.1.0",
   "description": "Minimal set of basic CSS controls",
-  "main": "index.js",
+  "main": "src/sass/cestbleu.sass",
+  "style": "dist/css/cestbleu.css",
   "scripts": {
     "start": "npm run build && static -p 6060 -c 1",
     "clean": "rimraf dist",
