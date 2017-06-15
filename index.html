@@ -153,6 +153,126 @@
             <button class="button" disabled>Disabled plain button</button>
             <a class="button button-primary" disabled href="https://github.com/ezze/cestbleu">Disabled link button</a>
         </div>
+
+        <div class="label">
+            <h3>Labels</h3>
+            <label class="label">Inline label</label>
+            <label class="label label-inline-block">Inline block label</label>
+            <label class="label label-block">Block label</label>
+        </div>
+
+        <div class="row">
+            <h3>Controls</h3>
+
+            <h4>Input</h4>
+            <input class="control" type="text" value="Text" />
+
+            <h4>Select</h4>
+            <select class="control">
+                <option value="0">Select something...</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+            </select>
+
+            <h4>Textarea</h4>
+            <textarea class="control">Textarea</textarea>
+
+            <h4>Sizing</h4>
+            <div>
+                <div class="row">
+                    <input class="control control-medium" type="text" value="Text" />
+                    <input class="control" type="text" value="Text" />
+                    <input class="control control-small" type="text" value="Text" />
+                </div>
+                <div class="row">
+                    <select class="control control-medium">
+                        <option value="0">Select something...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                    <select class="control">
+                        <option value="0">Select something...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                    <select class="control control-small">
+                        <option value="0">Select something...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <textarea class="control control-medium">Textarea</textarea>
+                    <textarea class="control">Textarea</textarea>
+                    <textarea class="control control-small">Textarea</textarea>
+                </div>
+            </div>
+
+            <h4>Stretching</h4>
+            <div style="width: 500px">
+                <div class="row">
+                    <input class="control control-wide" type="text" value="Text" />
+                </div>
+                <div class="row">
+                    <select class="control control-wide">
+                        <option value="0">Select something...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <textarea class="control control-wide">Textarea</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h3>Checkboxes & radios</h3>
+
+            <h4>Single</h4>
+            <div>
+                <div class="row">
+                    <label class="checkbox">
+                        <input type="checkbox" /><span>Checkbox</span>
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="radio">
+                        <input type="radio" /><span>Radio</span>
+                    </label>
+                </div>
+            </div>
+
+            <h4>Groups</h4>
+            <div>
+                <div class="row">
+                    <label class="checkbox-group">
+                        <label class="checkbox">
+                            <input type="checkbox" /><span>Checkbox 1</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" /><span>Checkbox 2</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" /><span>Checkbox 3</span>
+                        </label>
+                    </label>
+                </div>
+                <div class="row">
+                    <label class="radio-group">
+                        <label class="radio">
+                            <input type="radio" name="radio" /><span>Radio 1</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio" /><span>Radio 2</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio" /><span>Radio 3</span>
+                        </label>
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

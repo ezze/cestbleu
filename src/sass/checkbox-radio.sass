@@ -1,0 +1,110 @@
+@import "variables"
+@import "mixins"
+
+
+label.checkbox,
+label.radio
+  position: relative
+  display: inline-block
+
+  > input[type="checkbox"],
+  > input[type="radio"]
+    display: none
+
+    ~ span
+      padding-left: $checkbox-radio-size + $checkbox-radio-gap
+      font-weight: bold
+
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        width: $checkbox-radio-size
+        height: $checkbox-radio-size
+        margin-top: -($checkbox-radio-size / 2)
+        background-size: $checkbox-radio-size
+
+
+  > input[type="checkbox"]
+    ~ span
+      +preload(after, '../img/checkbox-unchecked.svg?fill=#{$checkbox-color}', '../img/checkbox-checked.svg?fill=#{$checkbox-color}', '../img/checkbox-unchecked.svg?fill=#{$checkbox-hover-color}', '../img/checkbox-checked.svg?fill=#{$checkbox-hover-color}')
+
+      cursor: pointer
+      &:before
+        background-image: url('../img/checkbox-unchecked.svg?fill=#{$checkbox-color}')
+
+      &:hover
+        &:before
+          background-image: url('../img/checkbox-unchecked.svg?fill=#{$checkbox-hover-color}')
+
+    &:checked
+      ~ span
+        &:before
+          background-image: url('../img/checkbox-checked.svg?fill=#{$checkbox-color}')
+
+        &:hover
+          &:before
+            background-image: url('../img/checkbox-checked.svg?fill=#{$checkbox-hover-color}')
+
+
+  > input[type="radio"]
+    ~ span
+      +preload(after, '../img/radio-unchecked.svg?fill=#{$radio-color}', '../img/radio-checked.svg?fill=#{$radio-color}', '../img/radio-unchecked.svg?fill=#{$radio-hover-color}', '../img/radio-checked.svg?fill=#{$radio-hover-color}')
+
+      cursor: pointer
+      &:before
+        background-image: url('../img/radio-unchecked.svg?fill=#{$radio-color}')
+
+      &:hover
+        &:before
+          background-image: url('../img/radio-unchecked.svg?fill=#{$radio-hover-color}')
+
+    &:checked
+      ~ span
+        &:before
+          background-image: url('../img/radio-checked.svg?fill=#{$radio-color}')
+
+        &:hover
+          &:before
+            background-image: url('../img/radio-checked.svg?fill=#{$radio-hover-color}')
+
+
+.checkbox-group,
+.radio-group
+  display: flex
+  flex-direction: column
+
+  > label,
+  > .checkbox-group-item,
+  > .radio-group-item
+    line-height: $checkbox-radio-group-item-height
+
+    input[type="checkbox"],
+    input[type="radio"]
+      ~ span
+        font-weight: normal
+
+
+.checkbox-group-item,
+.radio-group-item
+  height: auto
+  margin-top: $checkbox-radio-group-item-gap / 2
+
+  &:first-child
+    margin-top: 0
+
+
+.checkbox-group-item-inner,
+.radio-group-item-inner
+  height: auto
+  transition: height $expand-transition-duration ease-out
+
+  &.checkbox-group-item-inner-transition,
+  &.radio-group-item-inner-transition
+    overflow: hidden
+
+  &.checkbox-group-item-inner-hidden,
+  &.radio-group-item-inner-hidden
+    height: 0
+    overflow: hidden
