@@ -1,0 +1,48 @@
+@import "variables"
+
+
+.block
+  margin: $block-gap 0
+  border: 1px solid $block-border-color
+  border-radius: $block-border-radius
+  color: $block-text-color
+  background-color: $block-bg-color
+
+  &:first-child
+    margin-top: 0
+
+  &:last-child
+    margin-bottom: 0
+
+
+.block-header
+  position: relative
+  height: $block-header-height
+  line-height: $block-header-height
+  font-size: $block-header-font-size
+  font-weight: bold
+  color: $block-header-text-color
+  background-color: $block-header-bg-color
+  padding: 0 $block-padding-horizontal
+
+
+.block-content
+  position: relative
+  margin: 0
+  padding: 0
+  height: auto
+  transition: height $expand-transition-duration ease-out
+
+  &.block-content-transition
+    overflow: hidden
+
+  &.block-content-hidden
+    height: 0
+    overflow: hidden
+
+
+.block-content-item
+  padding: $block-padding-vertical $block-padding-horizontal
+
+  &:not(:first-of-type)
+    border-top: 1px solid $block-border-color

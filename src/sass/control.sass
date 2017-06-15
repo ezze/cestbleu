@@ -1,0 +1,115 @@
+@import "variables"
+
+
+.control
+  height: $control-height
+  line-height: $control-height
+  padding: 0 $control-padding-horizontal
+  font-family: $control-font-family
+  font-size: $font-size-normal
+  color: $control-text-color
+  background-color: $control-bg-color
+  border: 1px solid $control-border-color
+  border-radius: $control-border-radius
+
+  &.control-small
+    font-size: $font-size-small
+    height: $control-small-height
+    line-height: $control-small-height
+    padding: 0 $control-small-padding-horizontal
+    border-radius: $control-small-border-radius
+
+  &.control-medium
+    font-size: $font-size-medium
+    height: $control-medium-height
+    line-height: $control-medium-height
+    padding: 0 $control-medium-padding-horizontal
+    border-radius: $control-medium-border-radius
+
+  &.control-wide
+    width: 100%
+
+  &:hover
+    border-color: $control-hover-border-color
+
+  &:focus
+    outline: none
+
+  &:disabled
+    cursor: default
+
+    &,
+    &:hover
+      color: $control-disabled-text-color
+      background-color: $control-disabled-bg-color
+      border-color: $control-disabled-border-color
+
+  &[readonly]
+    &,
+    &:hover
+      color: $control-readonly-text-color
+      background-color: $control-readonly-bg-color
+      border-color: $control-readonly-border-color
+
+
+.control-group
+  display: flex
+  flex-direction: row
+
+  > .control,
+  > .button
+
+    &:not(:first-child)
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+
+    &:not(:last-child)
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+  > .control-wrapper
+    &:not(:first-child)
+      > .control
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+
+    &:not(:last-child)
+      > .control
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+
+  > .control,
+  > .control-wrapper
+    & + .control
+      border-left: none
+
+    & + .button
+      margin-left: 1px
+
+  > .button
+    & + .button
+      border-left: 1px solid $button-group-restrictor-color
+
+    & + .control,
+    & + .control-wrapper
+      margin-left: 1px
+
+
+select[multiple].control
+  height: auto
+
+
+textarea.control
+  height: $control-height * 5 + 2px
+
+  &.control-small
+    height: $control-small-height * 5 + 2px
+
+  &.control-medium
+    height: $control-medium-height * 5 + 2px
+
+
+.control-group-split
+  display: flex
+  flex-direction: row
+  justify-content: space-between

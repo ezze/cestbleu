@@ -1,0 +1,36 @@
+{
+  "name": "cestbleu",
+  "version": "0.1.0",
+  "description": "Minimal set of basic CSS controls",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && static -p 6060 -c 1",
+    "clean": "rimraf dist",
+    "copy:img": "copyfiles -u 2 src/img/* dist/img",
+    "build": "npm run copy:img && node-sass src/sass/cestbleu.sass dist/css/cestbleu.css",
+    "rebuild": "npm run clean && npm run build",
+    "watch": "npm run build && node-sass --watch src/sass/cestbleu.sass dist/css/cestbleu.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezze/cestbleu.git"
+  },
+  "keywords": [
+    "controls",
+    "components",
+    "framework",
+    "css",
+    "sass"
+  ],
+  "author": "Dmitriy Pushkov <ezze@ezze.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezze/cestbleu/issues"
+  },
+  "homepage": "https://github.com/ezze/cestbleu#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "node-static": "^0.7.9",
+    "rimraf": "^2.6.1"
+  }
+}

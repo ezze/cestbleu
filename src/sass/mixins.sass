@@ -1,0 +1,15 @@
+=preload($type, $urls...)
+  $content: ()
+  @each $url in $urls
+    @if $url != important
+      $content: append($content, url($url), space)
+    @else
+      $content: append($content, !important, space)
+
+  &:#{$type}
+    position: absolute
+    width: 0
+    height: 0
+    overflow: hidden
+    z-index: -1
+    content: $content
