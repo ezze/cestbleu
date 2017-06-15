@@ -1,51 +1,50 @@
 // Colors
-$color-darken-percentage: 15%
-$color-lighten-percentage: 35%
+$color-darken-percentage: 15% !default
+$color-lighten-percentage: 35% !default
 
-$black: #000
-$white: #fff
+$black: #000 !default
+$white: #fff !default
 
-$gray: #888
-$gray-dark: #444
-$gray-light: #eee
+$gray: #888 !default
+$gray-dark: #444 !default
+$gray-light: #eee !default
 
-$blue: #1f42b3
-$blue-dark: darken($blue, $color-darken-percentage)
-$blue-light: lighten($blue, $color-lighten-percentage)
+$blue: #1f42b3 !default
+$blue-dark: darken($blue, $color-darken-percentage) !default
+$blue-light: lighten($blue, $color-lighten-percentage) !default
 
-$red: #e00707
-$red-dark: darken($red, $color-darken-percentage)
-$red-light: lighten($red, $color-lighten-percentage)
+$red: #e00707 !default
+$red-dark: darken($red, $color-darken-percentage) !default
+$red-light: lighten($red, $color-lighten-percentage) !default
 
-$green: #368f0a
-$green-dark: darken($green, $color-darken-percentage)
-$green-light: lighten($green, $color-lighten-percentage)
+$green: #368f0a !default
+$green-dark: darken($green, $color-darken-percentage) !default
+$green-light: lighten($green, $color-lighten-percentage) !default
 
-$yellow: #fff600
-$yellow-dark: darken($yellow, $color-darken-percentage)
-$yellow-light: lighten($yellow, $color-lighten-percentage)
+$yellow: #fff600 !default
+$yellow-dark: darken($yellow, $color-darken-percentage) !default
+$yellow-light: lighten($yellow, $color-lighten-percentage) !default
 
-$orange: #ffb400
-$orange-dark: darken($orange, $color-darken-percentage)
-$orange-light: lighten($orange, $color-lighten-percentage)
+$orange: #ffb400 !default
+$orange-dark: darken($orange, $color-darken-percentage) !default
+$orange-light: lighten($orange, $color-lighten-percentage) !default
 
-$cyan: #30728b
-$cyan-dark: darken($cyan, $color-darken-percentage)
-$cyan-light: lighten($cyan, $color-lighten-percentage)
+$cyan: #30728b !default
+$cyan-dark: darken($cyan, $color-darken-percentage) !default
+$cyan-light: lighten($cyan, $color-lighten-percentage) !default
 
-$brown: #a23d00
-$brown-dark: darken($brown, $color-darken-percentage)
-$brown-light: lighten($brown, $color-lighten-percentage)
+$brown: #a23d00 !default
+$brown-dark: darken($brown, $color-darken-percentage) !default
+$brown-light: lighten($brown, $color-lighten-percentage) !default
 
-$purple: #6700a9
-$purple-dark: darken($purple, $color-darken-percentage)
-$purple-light: lighten($purple, $color-lighten-percentage)
+$purple: #6700a9 !default
+$purple-dark: darken($purple, $color-darken-percentage) !default
+$purple-light: lighten($purple, $color-lighten-percentage) !default
 
 $theme: "cyan" !default
 $primary: $cyan
 $primary-dark: $cyan-dark
 $primary-light: $cyan-light
-
 
 @if ($theme == "blue")
   $primary: $blue
@@ -84,146 +83,146 @@ $colors: (blue: ($blue, $blue-dark, $blue-light), red: ($red, $red-dark, $red-li
 
 
 // Font
-$font-family: -apple-system, Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-$font-family-monospace: "Ubuntu Monospace", "Source Code Pro", "Monaco", "Inconsolata", monospace
-$font-size-huge: 28px
-$font-size-large: 22px
-$font-size-medium: 18px
-$font-size-normal: 14px
-$font-size-small: 11px
-$font-size-tiny: 9px
-$line-height: 1.2
+$font-family: -apple-system, Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default
+$font-family-monospace: "Ubuntu Monospace", "Source Code Pro", "Monaco", "Inconsolata", monospace !default
+$font-size-huge: 28px !default
+$font-size-large: 22px !default
+$font-size-medium: 18px !default
+$font-size-normal: 14px !default
+$font-size-small: 11px !default
+$font-size-tiny: 10px !default
+$line-height: 1.2 !default
 
 
 // Text
-$text-color: $black
-$error-text-color: $red-dark
+$text-color: $black !default
+$error-text-color: $red-dark !default
 
 
 // Link
-$link-color: $cyan
-$link-hover-color: lighten($link-color, 10%)
+$link-color: $cyan !default
+$link-hover-color: lighten($link-color, 10%) !default
 
 
 // Padding
-$padding-horizontal: 15px
-$padding-vertical: 15px
+$padding-horizontal: 15px !default
+$padding-vertical: 15px !default
 
 
 // Heading
-$heading-gap: $padding-vertical
+$heading-gap: $padding-vertical !default
 
 
 // List
-$list-gap: $padding-vertical
-$list-item-bullet-width: 20px
+$list-gap: $padding-vertical !default
+$list-item-bullet-width: 20px !default
 
 
 // Button
-$button-font-family: $font-family
+$button-font-family: $font-family !default
 
-$button-default-text-color: $primary
-$button-default-bg-color: $white
-$button-default-hover-text-color: $white
-$button-default-hover-bg-color: $primary-light
-$button-default-active-text-color: $white
-$button-default-active-bg-color: lighten($primary, 20%)
+$button-default-text-color: $primary !default
+$button-default-bg-color: $white !default
+$button-default-hover-text-color: $white !default
+$button-default-hover-bg-color: $primary-light !default
+$button-default-active-text-color: $white !default
+$button-default-active-bg-color: lighten($primary, 20%) !default
 
-$button-dark-text-color: $black
-$button-light-text-color: $white
+$button-dark-text-color: $black !default
+$button-light-text-color: $white !default
 
-$button-disabled-text-color: $white
-$button-disabled-bg-color: $gray
+$button-disabled-text-color: $white !default
+$button-disabled-bg-color: $gray !default
 
-$button-height: 32px
-$button-padding-horizontal: 12px
-$button-border-radius: 4px
-$button-icon-gap: 4px
+$button-height: 32px !default
+$button-padding-horizontal: 12px !default
+$button-border-radius: 4px !default
+$button-icon-gap: 4px !default
 
-$button-small-height: 24px
-$button-small-padding-horizontal: 8px
-$button-small-border-radius: 3px
-$button-small-icon-gap: $button-icon-gap
+$button-small-height: 24px !default
+$button-small-padding-horizontal: 8px !default
+$button-small-border-radius: 3px !default
+$button-small-icon-gap: $button-icon-gap !default
 
-$button-medium-height: 40px
-$button-medium-padding-horizontal: 16px
-$button-medium-border-radius: $button-border-radius
-$button-medium-icon-gap: $button-icon-gap
+$button-medium-height: 40px !default
+$button-medium-padding-horizontal: 16px !default
+$button-medium-border-radius: $button-border-radius !default
+$button-medium-icon-gap: $button-icon-gap !default
 
-$button-group-restrictor-color: $primary-light
+$button-group-restrictor-color: $primary-light !default
 
 
 // Label
-$label-text-color: $text-color
-$label-block-gap: 5px
+$label-text-color: $text-color !default
+$label-block-gap: 5px !default
 
 
 // Control (select, text input, textarea)
-$control-font-family: $font-family
-$control-text-color: $primary
-$control-bg-color: $white
-$control-border-color: $primary
-$control-hover-border-color: lighten($control-border-color, 10%)
+$control-font-family: $font-family !default
+$control-text-color: $primary !default
+$control-bg-color: $white !default
+$control-border-color: $primary !default
+$control-hover-border-color: lighten($control-border-color, 10%) !default
 
-$control-height: 32px
-$control-padding-horizontal: 8px
-$control-border-radius: 4px
+$control-height: 32px !default
+$control-padding-horizontal: 8px !default
+$control-border-radius: 4px !default
 
-$control-small-height: 24px
-$control-small-padding-horizontal: 5px
-$control-small-border-radius: 3px
+$control-small-height: 24px !default
+$control-small-padding-horizontal: 5px !default
+$control-small-border-radius: 3px !default
 
-$control-medium-height: 40px
-$control-medium-padding-horizontal: 12px
-$control-medium-border-radius: $control-border-radius
+$control-medium-height: 40px !default
+$control-medium-padding-horizontal: 12px !default
+$control-medium-border-radius: $control-border-radius !default
 
-$control-disabled-text-color: $gray
-$control-disabled-bg-color: $gray-light
-$control-disabled-border-color: $gray
+$control-disabled-text-color: $gray !default
+$control-disabled-bg-color: $gray-light !default
+$control-disabled-border-color: $gray !default
 
-$control-readonly-text-color: $control-text-color
-$control-readonly-bg-color: $control-bg-color
-$control-readonly-border-color: $control-border-color
+$control-readonly-text-color: $control-text-color !default
+$control-readonly-bg-color: $control-bg-color !default
+$control-readonly-border-color: $control-border-color !default
 
 
 // Checkbox / radio
-$checkbox-radio-gap: 5px
-$checkbox-radio-size: 15px
-$checkbox-radio-group-item-height: 24px
-$checkbox-radio-group-item-gap: 6px
+$checkbox-radio-gap: 5px !default
+$checkbox-radio-size: 15px !default
+$checkbox-radio-group-item-height: 24px !default
+$checkbox-radio-group-item-gap: 6px !default
 
 
 // Checkbox only
-$checkbox-color: $control-border-color
-$checkbox-hover-color: $control-hover-border-color
+$checkbox-color: $control-border-color !default
+$checkbox-hover-color: $control-hover-border-color !default
 
 
 // Radio only
-$radio-color: $control-border-color
-$radio-hover-color: $control-hover-border-color
+$radio-color: $control-border-color !default
+$radio-hover-color: $control-hover-border-color !default
 
 
 // Row
-$row-gap: $padding-vertical
-$row-item-gap: $padding-horizontal
+$row-gap: $padding-vertical !default
+$row-item-gap: $padding-horizontal !default
 
 
 // Block
-$block-gap: $padding-vertical
+$block-gap: $padding-vertical !default
 
-$block-text-color: $black
-$block-bg-color: $white
-$block-border-color: $primary-light
-$block-border-radius: 4px
+$block-text-color: $black !default
+$block-bg-color: $white !default
+$block-border-color: $primary-light !default
+$block-border-radius: 4px !default
 
-$block-header-font-size: $font-size-medium
-$block-header-text-color: $primary-dark
-$block-header-bg-color: $primary-light
-$block-header-height: 50px
+$block-header-font-size: $font-size-medium !default
+$block-header-text-color: $primary-dark !default
+$block-header-bg-color: $primary-light !default
+$block-header-height: 50px !default
 
-$block-padding-horizontal: $padding-horizontal
-$block-padding-vertical: $padding-vertical
+$block-padding-horizontal: $padding-horizontal !default
+$block-padding-vertical: $padding-vertical !default
 
 
 // Transition
-$expand-transition-duration: 0.3s
+$expand-transition-duration: 0.3s !default
