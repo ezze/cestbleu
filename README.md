@@ -33,3 +33,7 @@ In order to build the framework follow these simple steps:
    ```
    
    and see the results in a browser accessing [http://localhost:6060](http://localhost:6060).
+
+## License
+
+[MIT](LICENSE)
