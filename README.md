@@ -1,5 +1,7 @@
 # C'est Bleu
 
+[![npm version](https://badge.fury.io/js/cestbleu.svg)](https://badge.fury.io/js/cestbleu)
+
 This is a [SASS-based](http://sass-lang.com/) CSS framework consisting of basic HTML controls such as
 buttons, labels, inputs, selects, checkboxes, radios and simple components such as rows and blocks purposed for
 controls' grouping and positioning.
