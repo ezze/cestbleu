@@ -1,15 +1,17 @@
 {
   "name": "cestbleu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Minimal set of basic CSS controls",
-  "main": "index.js",
+  "main": "src/sass/cestbleu.sass",
+  "style": "dist/css/cestbleu.css",
   "scripts": {
     "start": "npm run build && static -p 6060 -c 1",
     "clean": "rimraf dist",
     "copy:img": "copyfiles -u 2 src/img/* dist/img",
     "build": "npm run copy:img && node-sass src/sass/cestbleu.sass dist/css/cestbleu.css",
     "rebuild": "npm run clean && npm run build",
-    "watch": "npm run build && node-sass --watch src/sass/cestbleu.sass dist/css/cestbleu.css"
+    "watch": "npm run build && node-sass --watch src/sass/cestbleu.sass dist/css/cestbleu.css",
+    "prepublish": "npm run rebuild"
   },
   "repository": {
     "type": "git",
