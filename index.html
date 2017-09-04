@@ -152,13 +152,33 @@
             <h4>Disabled</h4>
             <button class="button" disabled>Disabled plain button</button>
             <a class="button button-primary" disabled href="https://github.com/ezze/cestbleu">Disabled link button</a>
+
+            <h4>Group</h4>
+            <div>
+                <div class="row">
+                    <div class="control-group">
+                        <button class="button button-primary">One</button>
+                        <button class="button button-primary">Two</button>
+                        <button class="button button-primary">Three</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control-group">
+                        <button class="button">One</button>
+                        <button class="button">Two</button>
+                        <button class="button">Three</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="label">
-            <h3>Labels</h3>
-            <label class="label">Inline label</label>
-            <label class="label label-inline-block">Inline block label</label>
-            <label class="label label-block">Block label</label>
+        <div class="row">
+            <div class="label">
+                <h3>Labels</h3>
+                <label class="label">Inline label</label>
+                <label class="label label-inline-block">Inline block label</label>
+                <label class="label label-block">Block label</label>
+            </div>
         </div>
 
         <div class="row">
@@ -176,6 +196,23 @@
 
             <h4>Textarea</h4>
             <textarea class="control">Textarea</textarea>
+
+            <h4>Groups</h4>
+            <div>
+                <div class="row">
+                    <div class="control-group" style="width: 180px">
+                        <input class="control control-wide" value="Some text" />
+                        <button class="button button-primary"><i class="fa fa-search"></i> Search</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control-group" style="width: 240px">
+                        <button class="button button-primary">Prepend</button>
+                        <input class="control control-wide" value="Some text" />
+                        <button class="button button-primary">Append</button>
+                    </div>
+                </div>
+            </div>
 
             <h4>Sizing</h4>
             <div>
