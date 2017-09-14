@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.2.2 (2017-09-14)
+
+- Select arrow is customized.
+
 ### 0.2.1 (2017-09-04)
 
 - No text breaks for buttons.
