@@ -95,8 +95,32 @@
       margin-left: 1px
 
 
-select[multiple].control
-  height: auto
+select
+  &[multiple].control
+    height: auto
+
+  &.control
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    background: url('../img/caret-down.svg?fill=#{$control-text-color}') no-repeat
+    background-size: $select-arrow-size $select-arrow-size
+    background-position: right $control-padding-horizontal top 50%
+    padding-right: 1.5 * $control-padding-horizontal + $select-arrow-size
+
+    &.control-small
+      background-size: $select-small-arrow-size $select-small-arrow-size
+      background-position: right $control-small-padding-horizontal top 50%
+      padding-right: 1.5 * $control-small-padding-horizontal + $select-small-arrow-size
+
+    &.control-medium
+      background-size: $select-medium-arrow-size $select-medium-arrow-size
+      background-position: right $control-medium-padding-horizontal top 50%
+      padding-right: 1.5 * $control-medium-padding-horizontal + $select-medium-arrow-size
+
+    &:-moz-focusring
+      color: transparent
+      text-shadow: 0 0 0 $control-text-color
 
 
 textarea.control
