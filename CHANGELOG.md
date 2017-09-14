@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.2.3 (2017-09-14)
+
+- Select background color bug is fixed.
+
 ### 0.2.2 (2017-09-14)
 
 - Select arrow is customized.
