@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.2.5
+
+- Fieldset variables are reassignable.
+
 ### 0.2.4 (2017-10-03)
 
 - Fieldset and legend are styled.
