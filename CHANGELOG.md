@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.2.4 (2017-10-03)
+
+- Fieldset and legend are styled.
+
 ### 0.2.3 (2017-09-14)
 
 - Select background color bug is fixed.
