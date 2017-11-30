@@ -11,7 +11,7 @@
     "build": "npm run copy:img && node-sass src/sass/cestbleu.sass dist/css/cestbleu.css",
     "rebuild": "npm run clean && npm run build",
     "watch": "npm run build && node-sass --watch src/sass/cestbleu.sass dist/css/cestbleu.css",
-    "prepublish": "npm run rebuild"
+    "prepublishOnly": "npm run rebuild"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/ezze/cestbleu#readme",
   "devDependencies": {
+    "copyfiles": "^1.2.0",
     "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
     "rimraf": "^2.6.2"
