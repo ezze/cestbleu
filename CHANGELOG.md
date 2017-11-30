@@ -1,6 +1,10 @@
 ## Changelog
 
-### 0.2.5
+### 0.3.0 (2017-11-30)
+
+- Popup component is added with menu examples.
+
+### 0.2.5 (2017-10-03)
 
 - Fieldset variables are reassignable.
 

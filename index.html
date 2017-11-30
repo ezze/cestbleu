@@ -401,6 +401,77 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <h3>Popup</h3>
+
+            <h4>Menu with border</h4>
+            <div>
+                <ul class="popup popup-menu popup-border popup-open" style="display: inline-block;">
+                    <li class="popup-item popup-item-active"><a href="#">First item</a></li>
+                    <li class="popup-item"><a href="#">Second item</a></li>
+                    <li class="popup-item"><a href="#">Third item</a></li>
+                    <li class="popup-item popup-item-disabled"><a href="#">Fourth item</a></li>
+                </ul>
+            </div>
+
+            <h4>Menu without border</h4>
+            <div style="background-color: #000; padding: 15px;">
+                <ul class="popup popup-menu popup-open" style="display: inline-block;">
+                    <li class="popup-item popup-item-active"><a href="#">First item</a></li>
+                    <li class="popup-item"><a href="#">Second item</a></li>
+                    <li class="popup-item"><a href="#">Third item</a></li>
+                    <li class="popup-item popup-item-disabled"><a href="#">Fourth item</a></li>
+                </ul>
+            </div>
+
+            <h4>Menu with submenus</h4>
+            <div>
+                <ul class="popup popup-menu popup-border popup-open" style="display: inline-block;">
+                    <li class="popup-item popup-item-active"><a href="#">First item</a></li>
+                    <li class="popup-item">
+                        <a href="#">
+                            <span>Second item</span>
+                            <i class="popup-item-caret fa fa-caret-right"></i>
+                        </a>
+                        <div class="popup-item-submenu">
+                            <ul class="popup popup-menu popup-border popup-open">
+                                <li class="popup-item"><a href="#">First subitem</a></li>
+                                <li class="popup-item"><a href="#">Second subitem</a></li>
+                                <li class="popup-item"><a href="#">Third subitem</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="popup-item"><a href="#">Third item</a></li>
+                    <li class="popup-item popup-item-disabled"><a href="#">Fourth item</a></li>
+                </ul>
+            </div>
+
+            <h4>Right-aligned menu</h4>
+            <div style="width: 500px;">
+                <ul class="popup popup-menu popup-border popup-align-right popup-open" style="display: inline-block; float: right;">
+                    <li class="popup-item popup-item-active">
+                        <a href="#"><span></span>First item</a>
+                    </li>
+                    <li class="popup-item">
+                        <a href="#">
+                            <i class="popup-item-caret fa fa-caret-left"></i>
+                            <span>Second item</span>
+                        </a>
+                        <div class="popup-item-submenu">
+                            <ul class="popup popup-menu popup-border popup-align-right popup-open">
+                                <li class="popup-item"><a href="#"><span></span>First subitem</a></li>
+                                <li class="popup-item"><a href="#"><span></span>Second subitem</a></li>
+                                <li class="popup-item"><a href="#"><span></span>Third subitem</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="popup-item"><a href="#"><span></span>Third item</a></li>
+                    <li class="popup-item popup-item-disabled"><a href="#"><span></span>Fourth item</a></li>
+                </ul>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

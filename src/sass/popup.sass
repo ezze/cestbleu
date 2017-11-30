@@ -1,0 +1,124 @@
+@import "./variables"
+
+
+.popup
+  position: relative
+  top: 0
+  z-index: $popup-zindex
+  background-color: $popup-bg-color
+  border-radius: $popup-border-radius
+  display: none
+
+  &,
+  &.popup-align-left
+    left: 0
+    right: auto
+
+  &.popup-align-right
+    left: auto
+    right: 0
+
+  &.popup-open
+    display: flex
+
+  &.popup-border
+    border: 1px solid $popup-border-color
+
+  &.popup-portal
+    position: absolute
+
+  &.popup-window
+    padding: $popup-window-padding-vertical $popup-window-padding-horizontal
+
+  &.popup-menu
+    flex-direction: column
+    margin: 0
+    padding: $popup-menu-padding-vertical 0
+    list-style: none
+
+
+.popup-item
+  position: relative
+  height: $popup-item-height
+  line-height: $popup-item-height
+  white-space: nowrap
+  margin: 0
+  padding: 0
+
+  &.popup-item-delimiter
+    height: $popup-item-delimiter-height
+    line-height: $popup-item-delimiter-height
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      right: 0
+      height: 1px
+      background-color: $popup-item-delimiter-color
+
+  > a
+    cursor: pointer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: baseline
+    padding: 0 $popup-item-link-padding-horizontal
+    color: $popup-item-link-text-color
+    background-color: $popup-item-link-bg-color
+
+    &,
+    &:hover,
+    &:visited
+      text-decoration: none
+
+    &:hover
+      color: $popup-item-link-hover-text-color
+      background-color: $popup-item-link-hover-bg-color
+
+  &.popup-item-active
+    > a
+      color: $popup-item-link-active-text-color
+      background-color: $popup-item-link-active-bg-color
+
+  &.popup-item-disabled
+    > a
+      &,
+      &:hover
+        cursor: default
+        color: $popup-item-link-disabled-text-color
+        background-color: $popup-item-link-disabled-bg-color
+
+
+.popup-item-submenu
+  position: absolute
+  top: - $popup-menu-padding-vertical
+
+  .popup-border > .popup-item > &
+    top: - $popup-menu-padding-vertical - 1px
+
+  .popup > .popup-item > &,
+  .popup-align-left > .popup-item > &
+    left: 100%
+    right: auto
+    margin-left: $popup-item-submenu-gap
+    text-align: left
+
+  .popup-align-right > .popup-item > &
+    left: auto
+    right: 100%
+    margin-right: $popup-item-submenu-gap
+    text-align: right
+
+
+.popup-item-caret
+  .popup > .popup-item > a > &,
+  .popup-align-left > .popup-item > a > &
+    margin-left: $popup-item-caret-gap
+    margin-right: 0
+
+  .popup-align-right > .popup-item > a > &
+    margin-left: 0
+    margin-right: $popup-item-caret-gap
