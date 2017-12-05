@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.3.1 (2017-12-05)
+
+- Helper CSS classes to set text and background colors are added.
+
 ### 0.3.0 (2017-11-30)
 
 - Popup component is added with menu examples.

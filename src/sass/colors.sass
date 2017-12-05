@@ -1,0 +1,22 @@
+@import "./variables"
+@import "./functions"
+
+
+@each $name, $values in $colors
+  $color: get-color($colors, $name)
+  .text-#{$name}
+    color: $color
+  .background-#{$name}
+    background-color: $color
+
+  $color: get-color($colors, $name, "dark")
+  .text-#{$name}-dark
+    color: $color
+  .background-#{$name}-dark
+    background-color: $color
+
+  $color: get-color($colors, $name, "light")
+  .text-#{$name}-light
+    color: $color
+  .background-#{$name}-light
+    background-color: $color
