@@ -1,85 +1,57 @@
+@import "./functions"
+
+
 // Colors
 $color-darken-percentage: 15% !default
 $color-lighten-percentage: 35% !default
 
 $black: #000 !default
 $white: #fff !default
-
 $gray: #888 !default
+$blue: #1f42b3 !default
+$red: #e00707 !default
+$green: #368f0a !default
+$yellow: #fff600 !default
+$orange: #ffb400 !default
+$cyan: #30728b !default
+$brown: #a23d00 !default
+$purple: #6700a9 !default
+
 $gray-dark: #444 !default
 $gray-light: #eee !default
 
-$blue: #1f42b3 !default
 $blue-dark: darken($blue, $color-darken-percentage) !default
 $blue-light: lighten($blue, $color-lighten-percentage) !default
 
-$red: #e00707 !default
 $red-dark: darken($red, $color-darken-percentage) !default
 $red-light: lighten($red, $color-lighten-percentage) !default
 
-$green: #368f0a !default
 $green-dark: darken($green, $color-darken-percentage) !default
 $green-light: lighten($green, $color-lighten-percentage) !default
 
-$yellow: #fff600 !default
 $yellow-dark: darken($yellow, $color-darken-percentage) !default
 $yellow-light: lighten($yellow, $color-lighten-percentage) !default
 
-$orange: #ffb400 !default
 $orange-dark: darken($orange, $color-darken-percentage) !default
 $orange-light: lighten($orange, $color-lighten-percentage) !default
 
-$cyan: #30728b !default
 $cyan-dark: darken($cyan, $color-darken-percentage) !default
 $cyan-light: lighten($cyan, $color-lighten-percentage) !default
 
-$brown: #a23d00 !default
 $brown-dark: darken($brown, $color-darken-percentage) !default
 $brown-light: lighten($brown, $color-lighten-percentage) !default
 
-$purple: #6700a9 !default
 $purple-dark: darken($purple, $color-darken-percentage) !default
 $purple-light: lighten($purple, $color-lighten-percentage) !default
 
+$colors: ("blue": ($blue, $blue-dark, $blue-light), "red": ($red, $red-dark, $red-light), "green": ($green, $green-dark, $green-light), "yellow": ($yellow, $yellow-dark, $yellow-light), "orange": ($orange, $orange-dark, $orange-light), "cyan": ($cyan, $cyan-dark, $cyan-light), "brown": ($brown, $brown-dark, $brown-light), "purple": ($purple, $purple-dark, $purple-light))
+
 $theme: "cyan" !default
-$primary: $cyan
-$primary-dark: $cyan-dark
-$primary-light: $cyan-light
+$primary: get-color($colors, $theme)
+$primary-dark: get-color($colors, $theme, "dark")
+$primary-light: get-color($colors, $theme, "light")
 
-@if ($theme == "blue")
-  $primary: $blue
-  $primary-dark: $blue-dark
-  $primary-light: $blue-light
-@else if ($theme == "red")
-  $primary: $red
-  $primary-dark: $red-dark
-  $primary-light: $red-light
-@else if ($theme == "green")
-  $primary: $green
-  $primary-dark: $green-dark
-  $primary-light: $green-light
-@else if ($theme == "yellow")
-  $primary: $yellow
-  $primary-dark: $yellow-dark
-  $primary-light: $yellow-light
-@else if ($theme == "orange")
-  $primary: $orange
-  $primary-dark: $orange-dark
-  $primary-light: $orange-light
-@else if ($theme == "cyan")
-  $primary: $cyan
-  $primary-dark: $cyan-dark
-  $primary-light: $cyan-light  
-@else if ($theme == "brown")
-  $primary: $brown
-  $primary-dark: $brown-dark
-  $primary-light: $brown-light
-@else if ($theme == "purple")
-  $primary: $purple
-  $primary-dark: $purple-dark
-  $primary-light: $purple-light
-
-$colors: (blue: ($blue, $blue-dark, $blue-light), red: ($red, $red-dark, $red-light), green: ($green, $green-dark, $green-light), yellow: ($yellow, $yellow-dark, $yellow-light), orange: ($orange, $orange-dark, $orange-light), cyan: ($cyan, $cyan-dark, $cyan-light), brown: ($brown, $brown-dark, $brown-light), purple: ($purple, $purple-dark, $purple-light), primary: ($primary, $primary-dark, $primary-light))
+$colors: map_merge($colors, ("primary": ($primary, $primary-dark, $primary-light)))
 
 
 // Font

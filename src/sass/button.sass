@@ -1,5 +1,5 @@
-@import "variables"
-@import "functions"
+@import "./variables"
+@import "./functions"
 
 
 .button
@@ -74,9 +74,9 @@
     outline: none
 
   @each $name, $values in $colors
-    $color: nth($values, 1)
-    $color-dark: nth($values, 2)
-    $color-light: nth($values, 3)
+    $color: get-color($colors, $name)
+    $color-dark: get-color($colors, $name, "dark")
+    $color-light: get-color($colors, $name, "light")
 
     &.button-#{$name}
       color: contrast-color($color-dark, $gray-dark)
