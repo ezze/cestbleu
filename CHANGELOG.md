@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.4.0 (2017-12-22)
+
+- Checkboxes' & radios' styling is refactored.
+- Controls' styling (including selects) is refactored.
+- Build and watch scripts are improved.
+
 ### 0.3.1 (2017-12-05)
 
 - Helper CSS classes to set text and background colors are added.

@@ -200,16 +200,43 @@
 
             <h4>Input</h4>
             <input class="control" type="text" value="Text" />
+            <input class="control" type="text" value="Text" disabled />
 
             <h4>Select</h4>
-            <select class="control">
-                <option value="0">Select something...</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-            </select>
+            <div>
+                <div class="row">
+                    <select class="control">
+                        <option value="0">Select something...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                    <select class="control" disabled>
+                        <option value="0">Select something...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="control control-select">
+                        <select>
+                            <option value="0">Select something...</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                    </div>
+                    <div class="control control-select control-select-disabled">
+                        <select disabled>
+                            <option value="0">Select something...</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
             <h4>Textarea</h4>
             <textarea class="control">Textarea</textarea>
+            <textarea class="control" disabled>Textarea</textarea>
 
             <h4>Groups</h4>
             <div>
@@ -220,10 +247,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="control-group" style="width: 240px">
+                    <div class="control-group" style="width: 440px">
                         <button class="button button-primary">Prepend</button>
                         <input class="control control-wide" value="Some text" />
                         <button class="button button-primary">Append</button>
+                        <div class="control control-select">
+                            <select>
+                                <option value="0">Select something...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                            </select>
+                            <div class="select-arrow"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,21 +271,27 @@
                     <input class="control control-small" type="text" value="Text" />
                 </div>
                 <div class="row">
-                    <select class="control control-medium">
-                        <option value="0">Select something...</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
-                    <select class="control">
-                        <option value="0">Select something...</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
-                    <select class="control control-small">
-                        <option value="0">Select something...</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
+                    <div class="control control-select control-medium">
+                        <select>
+                            <option value="0">Select something...</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                    </div>
+                    <div class="control control-select">
+                        <select>
+                            <option value="0">Select something...</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                    </div>
+                    <div class="control control-select control-small">
+                        <select>
+                            <option value="0">Select something...</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="row">
                     <textarea class="control control-medium">Textarea</textarea>
@@ -265,11 +306,13 @@
                     <input class="control control-wide" type="text" value="Text" />
                 </div>
                 <div class="row">
-                    <select class="control control-wide">
-                        <option value="0">Select something...</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                    </select>
+                    <div class="control control-select control-wide">
+                        <select>
+                            <option value="0">Select something...</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="row">
                     <textarea class="control control-wide">Textarea</textarea>

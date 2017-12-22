@@ -1,6 +1,6 @@
 {
   "name": "cestbleu",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Minimal set of basic CSS controls",
   "main": "src/sass/cestbleu.sass",
   "style": "dist/css/cestbleu.css",
@@ -8,9 +8,12 @@
     "start": "npm run build && static -p 6060 -c 1",
     "clean": "rimraf dist",
     "copy:img": "copyfiles -u 2 src/img/* dist/img",
-    "build": "npm run copy:img && node-sass src/sass/cestbleu.sass dist/css/cestbleu.css",
+    "build": "npm run copy:img && npm run css && npm run autoprefix && npm run minify",
+    "css": "node-sass src/sass/cestbleu.sass dist/css/cestbleu.css",
+    "autoprefix": "postcss --no-map --use autoprefixer --replace dist/css/cestbleu.css",
+    "minify": "postcss --no-map --use postcss-clean --output dist/css/cestbleu.min.css dist/css/cestbleu.css",
     "rebuild": "npm run clean && npm run build",
-    "watch": "npm run build && node-sass --watch src/sass/cestbleu.sass dist/css/cestbleu.css",
+    "watch": "npm run build && chokidar 'src/sass/**/*.sass' -c 'npm run build'",
     "prepublishOnly": "npm run rebuild"
   },
   "repository": {
@@ -31,9 +34,13 @@
   },
   "homepage": "https://github.com/ezze/cestbleu#readme",
   "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "chokidar-cli": "^1.2.0",
     "copyfiles": "^1.2.0",
     "node-sass": "^4.5.3",
     "node-static": "^0.7.9",
+    "postcss-clean": "^1.1.0",
+    "postcss-cli": "^4.1.1",
     "rimraf": "^2.6.2"
   }
 }

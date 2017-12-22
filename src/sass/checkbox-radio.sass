@@ -2,6 +2,32 @@
 @import "./mixins"
 
 
+=style-checkbox-radio($unchecked-url, $checked-url, $color, $hover-color)
+  ~ span
+    +preload(after, '#{$unchecked-url}', '#{$checked-url}')
+
+    cursor: pointer
+    &:before
+      mask-image: url('#{$unchecked-url}')
+      mask-repeat: no-repeat
+      mask-size: cover
+      background-color: $color
+
+    &:hover
+      &:before
+        background-color: $hover-color
+
+  &:checked
+    ~ span
+      &:before
+        mask-image: url('#{$checked-url}')
+        background-color: $color
+
+      &:hover
+        &:before
+          background-color: $hover-color
+
+
 label.checkbox,
 label.radio
   position: relative
@@ -27,47 +53,10 @@ label.radio
 
 
   > input[type="checkbox"]
-    ~ span
-      +preload(after, '../img/checkbox-unchecked.svg?fill=#{$checkbox-color}', '../img/checkbox-checked.svg?fill=#{$checkbox-color}', '../img/checkbox-unchecked.svg?fill=#{$checkbox-hover-color}', '../img/checkbox-checked.svg?fill=#{$checkbox-hover-color}')
-
-      cursor: pointer
-      &:before
-        background-image: url('../img/checkbox-unchecked.svg?fill=#{$checkbox-color}')
-
-      &:hover
-        &:before
-          background-image: url('../img/checkbox-unchecked.svg?fill=#{$checkbox-hover-color}')
-
-    &:checked
-      ~ span
-        &:before
-          background-image: url('../img/checkbox-checked.svg?fill=#{$checkbox-color}')
-
-        &:hover
-          &:before
-            background-image: url('../img/checkbox-checked.svg?fill=#{$checkbox-hover-color}')
-
+    +style-checkbox-radio('../img/checkbox-unchecked.svg', '../img/checkbox-checked.svg', $checkbox-color, $checkbox-hover-color)
 
   > input[type="radio"]
-    ~ span
-      +preload(after, '../img/radio-unchecked.svg?fill=#{$radio-color}', '../img/radio-checked.svg?fill=#{$radio-color}', '../img/radio-unchecked.svg?fill=#{$radio-hover-color}', '../img/radio-checked.svg?fill=#{$radio-hover-color}')
-
-      cursor: pointer
-      &:before
-        background-image: url('../img/radio-unchecked.svg?fill=#{$radio-color}')
-
-      &:hover
-        &:before
-          background-image: url('../img/radio-unchecked.svg?fill=#{$radio-hover-color}')
-
-    &:checked
-      ~ span
-        &:before
-          background-image: url('../img/radio-checked.svg?fill=#{$radio-color}')
-
-        &:hover
-          &:before
-            background-image: url('../img/radio-checked.svg?fill=#{$radio-hover-color}')
+    +style-checkbox-radio('../img/radio-unchecked.svg', '../img/radio-checked.svg', $radio-color, $radio-hover-color)
 
 
 .checkbox-group,
