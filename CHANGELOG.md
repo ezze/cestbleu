@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.2 (2017-12-22)
+
+- Buttons can be wrapped.
+
 ### 0.4.1 (2017-12-22)
 
 - Inputs and textareas can be wrapped.

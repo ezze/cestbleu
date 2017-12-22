@@ -185,7 +185,6 @@ div.control > textarea
 
   > .control,
   > .button
-
     &:not(:first-child)
       border-top-left-radius: 0
       border-bottom-left-radius: 0
@@ -196,26 +195,28 @@ div.control > textarea
 
   > .control
     &:not(:first-child)
-      > *
+      > input,
+      > textarea,
+      > select,
+      > .button
         border-top-left-radius: 0
         border-bottom-left-radius: 0
 
     &:not(:last-child)
-      > .control
+      > input,
+      > textarea,
+      > select,
+      > .button
         border-top-right-radius: 0
         border-bottom-right-radius: 0
 
   > .control,
-    & + .control
-      border-left: none
-
+    & + .control,
     & + .button
       margin-left: 1px
 
   > .button
-    & + .button
-      border-left: 1px solid $button-group-restrictor-color
-
+    & + .button,
     & + .control
       margin-left: 1px
 
