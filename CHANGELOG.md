@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.3 (2017-12-22)
+
+- `style-checkbox-radio` mixin is moved to `mixins.sass`.
+
 ### 0.4.2 (2017-12-22)
 
 - Buttons can be wrapped.
