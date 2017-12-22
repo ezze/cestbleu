@@ -1,7 +1,10 @@
 @import "./variables"
 
 
-.control
+input.control,
+textarea.control,
+select.control,
+div.control > select
   height: $control-height
   line-height: $control-height
   padding: 0 $control-padding-horizontal
@@ -12,6 +15,10 @@
   border: 1px solid $control-border-color
   border-radius: $control-border-radius
 
+
+input.control,
+textarea.control,
+select.control
   &.control-small
     font-size: $font-size-small
     height: $control-small-height
@@ -26,14 +33,8 @@
     padding: 0 $control-medium-padding-horizontal
     border-radius: $control-medium-border-radius
 
-  &.control-wide
-    width: 100%
-
   &:hover
     border-color: $control-hover-border-color
-
-  &:focus
-    outline: none
 
   &:disabled
     cursor: default
@@ -51,6 +52,129 @@
       background-color: $control-readonly-bg-color
       border-color: $control-readonly-border-color
 
+  &.control-wide
+    width: 100%
+
+  &:focus
+    outline: none
+
+
+div.control
+  position: relative
+  display: inline-block
+
+  &.control-wide
+    width: 100%
+
+  &.control-small
+    > input,
+    > textarea,
+    > select
+      font-size: $font-size-small
+      height: $control-small-height
+      line-height: $control-small-height
+      padding: 0 $control-small-padding-horizontal
+      border-radius: $control-small-border-radius
+
+  &.control-medium
+    > input,
+    > textarea,
+    > select
+      font-size: $font-size-medium
+      height: $control-medium-height
+      line-height: $control-medium-height
+      padding: 0 $control-medium-padding-horizontal
+      border-radius: $control-medium-border-radius
+
+  > input,
+  > textarea,
+  > select
+    &:hover
+      border-color: $control-hover-border-color
+
+    &:disabled
+      cursor: default
+
+      &,
+      &:hover
+        color: $control-disabled-text-color
+        background-color: $control-disabled-bg-color
+        border-color: $control-disabled-border-color
+
+    &[readonly]
+      &,
+      &:hover
+        color: $control-readonly-text-color
+        background-color: $control-readonly-bg-color
+        border-color: $control-readonly-border-color
+
+
+select.control,
+div.control > select
+  &[multiple]
+    height: auto
+
+  &:-moz-focusring
+    color: transparent
+    text-shadow: 0 0 0 $control-text-color
+
+
+div.control
+  > select
+    width: 100%
+    appearance: none
+    padding-right: 1.5 * $control-padding-horizontal + $select-arrow-size
+
+    .control-group > &
+      width: auto
+
+  &.control-select
+    &:after
+      content: ''
+      position: absolute
+      right: $control-padding-horizontal
+      top: ($control-height - $select-arrow-size) / 2
+      width: $select-arrow-size
+      height: $select-arrow-size
+      mask-image: url('../img/caret-down.svg')
+      mask-size: cover
+      background-color: $control-text-color
+      pointer-events: none
+
+    &.control-small
+      &:after
+        top: ($control-small-height - $select-arrow-small-size) / 2
+        width: $select-arrow-small-size
+        height: $select-arrow-small-size
+
+    &.control-medium
+      &:after
+        top: ($control-medium-height - $select-arrow-medium-size) / 2
+        width: $select-arrow-medium-size
+        height: $select-arrow-medium-size
+
+    &.control-select-disabled
+      &:after
+        background-color: $control-disabled-text-color
+
+  &.control-small
+    > select
+      padding-right: 1.5 * $control-small-padding-horizontal + $select-arrow-small-size
+
+  &.control-medium
+    > select
+      padding-right: 1.5 * $control-medium-padding-horizontal + $select-arrow-medium-size
+
+
+textarea.control
+  height: $control-height * 5 + 2px
+
+  &.control-small
+    height: $control-small-height * 5 + 2px
+
+  &.control-medium
+    height: $control-medium-height * 5 + 2px
+
 
 .control-group
   display: flex
@@ -67,9 +191,9 @@
       border-top-right-radius: 0
       border-bottom-right-radius: 0
 
-  > .control-wrapper
+  > .control
     &:not(:first-child)
-      > .control
+      > *
         border-top-left-radius: 0
         border-bottom-left-radius: 0
 
@@ -79,7 +203,6 @@
         border-bottom-right-radius: 0
 
   > .control,
-  > .control-wrapper
     & + .control
       border-left: none
 
@@ -90,45 +213,8 @@
     & + .button
       border-left: 1px solid $button-group-restrictor-color
 
-    & + .control,
-    & + .control-wrapper
+    & + .control
       margin-left: 1px
-
-
-select
-  &[multiple].control
-    height: auto
-
-  &.control
-    appearance: none
-    background: url('../img/caret-down.svg?fill=#{$control-text-color}') $control-bg-color no-repeat
-    background-size: $select-arrow-size $select-arrow-size
-    background-position: right $control-padding-horizontal top 50%
-    padding-right: 1.5 * $control-padding-horizontal + $select-arrow-size
-
-    &.control-small
-      background-size: $select-small-arrow-size $select-small-arrow-size
-      background-position: right $control-small-padding-horizontal top 50%
-      padding-right: 1.5 * $control-small-padding-horizontal + $select-small-arrow-size
-
-    &.control-medium
-      background-size: $select-medium-arrow-size $select-medium-arrow-size
-      background-position: right $control-medium-padding-horizontal top 50%
-      padding-right: 1.5 * $control-medium-padding-horizontal + $select-medium-arrow-size
-
-    &:-moz-focusring
-      color: transparent
-      text-shadow: 0 0 0 $control-text-color
-
-
-textarea.control
-  height: $control-height * 5 + 2px
-
-  &.control-small
-    height: $control-small-height * 5 + 2px
-
-  &.control-medium
-    height: $control-medium-height * 5 + 2px
 
 
 .control-group-split
