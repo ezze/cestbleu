@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.1 (2017-12-22)
+
+- Inputs and textareas can be wrapped.
+
 ### 0.4.0 (2017-12-22)
 
 - Checkboxes' & radios' styling is refactored.

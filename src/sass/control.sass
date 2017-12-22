@@ -4,6 +4,8 @@
 input.control,
 textarea.control,
 select.control,
+div.control > input,
+div.control > textarea,
 div.control > select
   height: $control-height
   line-height: $control-height
@@ -109,16 +111,6 @@ div.control
         border-color: $control-readonly-border-color
 
 
-select.control,
-div.control > select
-  &[multiple]
-    height: auto
-
-  &:-moz-focusring
-    color: transparent
-    text-shadow: 0 0 0 $control-text-color
-
-
 div.control
   > select
     width: 100%
@@ -166,7 +158,18 @@ div.control
       padding-right: 1.5 * $control-medium-padding-horizontal + $select-arrow-medium-size
 
 
-textarea.control
+select.control,
+div.control > select
+  &[multiple]
+    height: auto
+
+  &:-moz-focusring
+    color: transparent
+    text-shadow: 0 0 0 $control-text-color
+
+
+textarea.control,
+div.control > textarea
   height: $control-height * 5 + 2px
 
   &.control-small
