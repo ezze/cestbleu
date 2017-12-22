@@ -1,6 +1,6 @@
 {
   "name": "cestbleu",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Minimal set of basic CSS controls",
   "main": "src/sass/cestbleu.sass",
   "style": "dist/css/cestbleu.css",
