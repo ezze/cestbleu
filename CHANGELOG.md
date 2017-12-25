@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.4 (2017-12-25)
+
+- `style-checkbox-radio` mixin is splitted into two mixins: `style-checkbox-radio-url` and `style-checkbox-radio-color`.
+
 ### 0.4.3 (2017-12-22)
 
 - `style-checkbox-radio` mixin is moved to `mixins.sass`.

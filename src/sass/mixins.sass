@@ -23,15 +23,26 @@
   background-color: $color
 
 
-=style-checkbox-radio($unchecked-url, $checked-url, $color, $hover-color)
+=style-checkbox-radio-url($unchecked-url, $checked-url)
   ~ span
     +preload(after, '#{$unchecked-url}', '#{$checked-url}')
 
     cursor: pointer
+
     &:before
       mask-image: url('#{$unchecked-url}')
       mask-repeat: no-repeat
       mask-size: cover
+
+  &:checked
+    ~ span
+      &:before
+        mask-image: url('#{$checked-url}')
+
+
+=style-checkbox-radio-color($color, $hover-color)
+  ~ span
+    &:before
       background-color: $color
 
     &:hover
@@ -41,9 +52,13 @@
   &:checked
     ~ span
       &:before
-        mask-image: url('#{$checked-url}')
         background-color: $color
 
       &:hover
         &:before
           background-color: $hover-color
+
+
+=style-checkbox-radio($unchecked-url, $checked-url, $color, $hover-color)
+  +style-checkbox-radio-url($unchecked-url, $checked-url)
+  +style-checkbox-radio-color($color, $hover-color)
