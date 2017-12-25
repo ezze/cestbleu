@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.5 (2017-12-25)
+
+- Wide controls' stretching bug in Firefox is fixed.
+
 ### 0.4.4 (2017-12-25)
 
 - `style-checkbox-radio` mixin is splitted into two mixins: `style-checkbox-radio-url` and `style-checkbox-radio-color`.
