@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.6 (2019-04-11)
+
+- [Font awesome 5](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use) is supported.
+
 ### 0.4.5 (2017-12-25)
 
 - Wide controls' stretching bug in Firefox is fixed.
