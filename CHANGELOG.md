@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.7 (2019-07-11)
+
+- Vertical margins for fieldsets are added.
+
 ### 0.4.6 (2019-04-11)
 
 - [Font awesome 5](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use) is supported.
