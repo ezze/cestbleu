@@ -1,5 +1,7 @@
 ## Changelog
 
+### 0.4.7 (2019-07-11)
+
 - Vertical margins for fieldsets are added.
 
 ### 0.4.6 (2019-04-11)
