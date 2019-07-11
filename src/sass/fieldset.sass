@@ -3,8 +3,15 @@
 
 .fieldset
   padding: $fieldset-padding-vertical $fieldset-padding-horizontal
+  margin: $fieldset-margin-vertical 0
   border: 1px solid $fieldset-border-color
   border-radius: $fieldset-border-radius
+
+  &:first-child
+    margin-top: 0
+
+  &:last-child
+    margin-bottom: 0
 
 .fieldset-legend
   margin: 0 -$fieldset-legend-gap
