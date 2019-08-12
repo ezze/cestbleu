@@ -1,5 +1,7 @@
 ## Changelog
 
+### 0.4.8 (2019-08-12)
+
 - `sass` property is added to `package.json` to play well with [sass-loader^7.2.0](https://github.com/webpack-contrib/sass-loader/pull/647).
 
 ### 0.4.7 (2019-07-11)
