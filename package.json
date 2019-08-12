@@ -3,6 +3,7 @@
   "version": "0.4.7",
   "description": "Minimal set of basic CSS controls",
   "main": "src/sass/cestbleu.sass",
+  "sass": "src/sass/cestbleu.sass",
   "style": "dist/css/cestbleu.css",
   "scripts": {
     "start": "npm run build && static -p 6060 -c 1",
