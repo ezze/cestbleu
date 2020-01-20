@@ -39,6 +39,7 @@
 
 .popup-item
   position: relative
+  font-size: $popup-item-font-size
   height: $popup-item-height
   line-height: $popup-item-height
   white-space: nowrap
@@ -68,6 +69,13 @@
     padding: 0 $popup-item-link-padding-horizontal
     color: $popup-item-link-text-color
     background-color: $popup-item-link-bg-color
+
+    i
+      min-width: $popup-item-font-size
+      text-align: center
+
+      & ~ span
+        margin-left: $popup-item-link-icon-gap
 
     &,
     &:hover,

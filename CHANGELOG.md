@@ -1,5 +1,10 @@
 ## Changelog
 
+### 0.4.9 (2020-01-20)
+
+- Some styles for better support of icons for popup items are added.
+- Dependencies are upgraded.  
+
 ### 0.4.8 (2019-08-12)
 
 - `sass` property is added to `package.json` to play well with [sass-loader^7.2.0](https://github.com/webpack-contrib/sass-loader/pull/647).
