@@ -1,6 +1,7 @@
 ## Changelog
 
-- Some styles for better support of icons for popup items are added.  
+- Some styles for better support of icons for popup items are added.
+- Dependencies are upgraded.  
 
 ### 0.4.8 (2019-08-12)
 
