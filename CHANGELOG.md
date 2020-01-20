@@ -1,5 +1,7 @@
 ## Changelog
 
+### 0.4.9 (2020-01-20)
+
 - Some styles for better support of icons for popup items are added.
 - Dependencies are upgraded.  
 
