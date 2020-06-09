@@ -1,5 +1,9 @@
 ## Changelog
 
+### 0.4.10 (2020-06-09)
+
+- Checkboxes and radios respect disabled state including texts in sibling spans.
+
 ### 0.4.9 (2020-01-20)
 
 - Some styles for better support of icons for popup items are added.

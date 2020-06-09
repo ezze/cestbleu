@@ -25,14 +25,24 @@ label.radio
         margin-top: -($checkbox-radio-size / 2)
         background-size: $checkbox-radio-size
 
+    &:disabled
+      ~ span
+        color: $control-disabled-text-color
+
 
   > input[type="checkbox"]
     cursor: pointer
     +style-checkbox-radio('../img/checkbox-unchecked.svg', '../img/checkbox-checked.svg', $checkbox-color, $checkbox-hover-color)
 
+    &:disabled
+      +style-checkbox-radio('../img/checkbox-unchecked.svg', '../img/checkbox-checked.svg', $control-disabled-text-color, $control-disabled-text-color)
+
   > input[type="radio"]
     cursor: pointer
     +style-checkbox-radio('../img/radio-unchecked.svg', '../img/radio-checked.svg', $radio-color, $radio-hover-color)
+
+    &:disabled
+      +style-checkbox-radio('../img/radio-unchecked.svg', '../img/radio-checked.svg', $control-disabled-text-color, $control-disabled-text-color)
 
 
 .checkbox-group,
