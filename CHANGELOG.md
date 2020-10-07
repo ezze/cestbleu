@@ -1,5 +1,10 @@
 ## Changelog
 
+### 0.4.11 (2020-10-07)
+
+- `.control-addon` and `.control-custom` classes are added for non-input components in `.control-group`.
+- A gap between `.control-group` components is added.
+
 ### 0.4.10 (2020-06-09)
 
 - Checkboxes and radios respect disabled state including texts in sibling spans.
