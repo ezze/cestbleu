@@ -4,9 +4,11 @@
 input.control,
 textarea.control,
 select.control,
+.control-addon,
 div.control > input,
 div.control > textarea,
-div.control > select
+div.control > select,
+div.control > .control-addon
   height: $control-height
   line-height: $control-height
   padding: 0 $control-padding-horizontal
@@ -20,7 +22,8 @@ div.control > select
 
 input.control,
 textarea.control,
-select.control
+select.control,
+.control-addon
   &.control-small
     font-size: $font-size-small
     height: $control-small-height
@@ -35,7 +38,7 @@ select.control
     padding: 0 $control-medium-padding-horizontal
     border-radius: $control-medium-border-radius
 
-  &:hover
+  &:not(.control-addon):hover
     border-color: $control-hover-border-color
 
   &:disabled
@@ -73,7 +76,8 @@ div.control
   &.control-small
     > input,
     > textarea,
-    > select
+    > select,
+    > .control-addon
       font-size: $font-size-small
       height: $control-small-height
       line-height: $control-small-height
@@ -83,7 +87,8 @@ div.control
   &.control-medium
     > input,
     > textarea,
-    > select
+    > select,
+    > .control-addon
       font-size: $font-size-medium
       height: $control-medium-height
       line-height: $control-medium-height
@@ -185,7 +190,11 @@ div.control > textarea
   display: flex
   flex-direction: row
 
+  &:not(:last-child)
+    margin-right: $control-group-gap
+
   > .control,
+  > .control-addon,
   > .button
     &:not(:first-child)
       border-top-left-radius: 0
@@ -200,6 +209,7 @@ div.control > textarea
       > input,
       > textarea,
       > select,
+      > .control-addon,
       > .button
         border-top-left-radius: 0
         border-bottom-left-radius: 0
@@ -208,18 +218,19 @@ div.control > textarea
       > input,
       > textarea,
       > select,
+      > .control-addon,
       > .button
         border-top-right-radius: 0
         border-bottom-right-radius: 0
 
   > .control,
-    & + .control,
-    & + .button
-      margin-left: 1px
-
+  > .control-addon,
+  > .control-custom,
   > .button
-    & + .button,
-    & + .control
+    & + .control,
+    & + .control-addon,
+    & + .control-custom,
+    & + .button
       margin-left: 1px
 
 
