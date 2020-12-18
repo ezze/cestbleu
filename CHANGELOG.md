@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.4.12 (2020-12-18)
+
 - Primary colors can be overwritten.
 
 ## 0.4.11 (2020-10-07)
