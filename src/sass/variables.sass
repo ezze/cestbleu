@@ -47,9 +47,9 @@ $purple-light: lighten($purple, $color-lighten-percentage) !default
 $colors: ("blue": ($blue, $blue-dark, $blue-light), "red": ($red, $red-dark, $red-light), "green": ($green, $green-dark, $green-light), "yellow": ($yellow, $yellow-dark, $yellow-light), "orange": ($orange, $orange-dark, $orange-light), "cyan": ($cyan, $cyan-dark, $cyan-light), "brown": ($brown, $brown-dark, $brown-light), "purple": ($purple, $purple-dark, $purple-light))
 
 $theme: "cyan" !default
-$primary: get-color($colors, $theme)
-$primary-dark: get-color($colors, $theme, "dark")
-$primary-light: get-color($colors, $theme, "light")
+$primary: get-color($colors, $theme) !default
+$primary-dark: get-color($colors, $theme, "dark") !default
+$primary-light: get-color($colors, $theme, "light") !default
 
 $colors: map_merge($colors, ("primary": ($primary, $primary-dark, $primary-light)))
 
